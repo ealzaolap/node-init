@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # Introducción
 
 
@@ -140,13 +141,87 @@ Note:
   to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
 ```
 
-### Node.js Console - REPL
+## 4. Node.js Console - REPL
 
 Node.js viene con un entorno virtual llamado REPL (también conocido como Node shell). REPL significa Read-Eval-Print-Loop. Es una forma rápida y fácil de probar el código simple Node.js / JavaScript.
 
 Para iniciar REPL (Node shell), abra el símbolo del sistema (en Windows) o terminal (en Mac o UNIX / Linux) y escriba node como se muestra a continuación. Cambiará la solicitud a> en Windows y MAC.
 
-```ngix
+```powershell
 C:\> node
 > _
 ```
+
+Ahora puede probar prácticamente cualquier expresión Node.js / JavaScript en REPL. Por ejemplo, si escribe "10 + 20", mostrará el resultado 30 inmediatamente en una nueva línea.
+
+```powershell
+> 10 + 20
+30
+```
+
+También puede definir variables y realizar alguna operación sobre ellas.
+
+```powershell
+> var x = 10, y = 20;
+> x + y
+30
+```
+
+Si necesita escribir una expresión o función de JavaScript de varias líneas, simplemente presione Entrar cuando desee escribir algo en la siguiente línea como continuación de su código. El terminal REPL mostrará tres puntos (...), lo que significa que puede continuar en la línea siguiente. Escriba .break para salir del modo de continuidad.
+Por ejemplo, puede definir una función y ejecutarla como se muestra a continuación.
+
+```powershell
+C:\>node
+> function multiply(x, y)
+...{
+...	return x * y
+...}
+undefined
+>multiply(50 * 2)
+200
+>_
+```
+
+
+Puede ejecutar un archivo JavaScript externo escribiendo el comando node nombreArchivo. Por ejemplo, suponga que node-example.js está en la unidad C de su PC con el siguiente código.
+
+**node-example.js**
+
+```javascript
+console.log("Hello World");
+```
+
+Ahora, puede ejecutar node-exampel.js desde el símbolo del sistema como se muestra a continuación.
+
+```powershell
+C:\>node node-example.js
+Hello World
+
+C:\>
+```
+
+Para salir del terminal REPL, presione Ctrl + C dos veces o escriba .exit y presione Enter
+
+```powershell
+C:\>node
+>"Hello World"
+>
+^C again to quit>
+>
+C:\>
+```
+
+La siguiente tabla enumera los comandos REPL importantes.
+
+| REPL Command     | Descripción                                                  |
+| ---------------- | ------------------------------------------------------------ |
+| .help            | Mostrar ayuda sobre todos los comandos                       |
+| tab Keys         | Mostrar la lista de todos los comandos.                      |
+| Up/Down Keys     | Ver los comandos anteriores aplicados en REPL.               |
+| .save filename   | Guarda la sesión actual de Node REPL en un archivo.          |
+| .load filename   | Cargue el archivo especificado en la sesión actual de Node REPL. |
+| ctrl + c         | Terminar el comando actual.                                  |
+| ctrl + c (twice) | Salir de REPL.                                               |
+| ctrl + d         | Salir de REPL.                                               |
+| .break           | Salir de la expresión multilínea.                            |
+| .clear           | Salir de la expresión multilínea.                            |
