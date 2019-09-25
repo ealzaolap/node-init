@@ -6,7 +6,7 @@
 
 ### 01 Comprobar que dos cadenas de texto son iguales por sus caracteres ###
 
-	Cree una función que tome dos cadenas como argumentos y devuelva verdadero o falso dependiendo de si cada caractere en la primera cadena es igual cada caractere en la segunda cadena.
+Cree una función que tome dos cadenas como argumentos y devuelva verdadero o falso dependiendo de si cada caractere en la primera cadena es igual cada caractere en la segunda cadena.
 
 ##### Ejemplo:
 ```javascript
@@ -16,7 +16,7 @@ comp("ABC", "ABC") ➞ true
 
 ### 02 Invertir una matriz ###
 
-	Escribe una función para invertir una matriz. La función tomará como argumento una matriz y devolvera otra matriz con sus valores invertidos
+Escribe una función para invertir una matriz. La función tomará como argumento una matriz y devolvera otra matriz con sus valores invertidos
 
 ##### Ejemplo:
 ```javascript
@@ -25,7 +25,7 @@ invert(["B", "A"]) ➞ ["A", "B"]
 
 ### 03 Hola ${name} ###
 
-	Cree una función que tome un nombre y devuelva un saludo. No use una función normal, sino una "función de flecha".
+Cree una función que tome un nombre y devuelva un saludo. No use una función normal, sino una "función de flecha".
 
 ##### Ejemplo:
 ```javascript
@@ -34,7 +34,7 @@ helloName("Eduardo") ➞ "Hola Eduardo"
 
 ### 04 Volumen de una caja ###
 
-	Cree una función que obtenga argumentos de un objeto con la altura, el ancho y la longitud de una caja y devuelva el volumen de una caja.
+Cree una función que obtenga argumentos de un objeto con la altura, el ancho y la longitud de una caja y devuelva el volumen de una caja.
 
 ##### Ejemplo:
 ```javascript
@@ -57,7 +57,7 @@ volumen = largo * ancho * alto
 
 ### 05 ¿Está vacío el objeto? ###
 
-	Escriba una función que devuelva verdadero si un objeto está vacío, y falso en caso contrario.
+Escriba una función que devuelva verdadero si un objeto está vacío, y falso en caso contrario.
 
 ##### Ejemplo:
 ```javascript
@@ -68,7 +68,7 @@ isEmpty({ a: 1 }) ➞ false
 
 ### 06 Devuelve de los objetos las claves y los valores ###
 
-	Cree una función que tome un objeto y devuelva las claves y los valores como matrices separadas.
+Cree una función que tome un objeto y devuelva las claves y los valores como matrices separadas.
 
 ##### Ejemplo:
 ```javascript
