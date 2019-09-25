@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Introducción
 
 
@@ -8,21 +6,21 @@
 
    > [Node.js](https://nodejs.org/) es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación [ECMAScript](http://es6-features.org/), asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor [V8 de Google](https://v8.dev/).
 
-    Ryan Dahl el 8 de noviembre del 2009 presenta en el [JSConf.EU NodeJS](https://www.youtube.com/watch?v=ztspvPYybIY) a la comunidad Javascript, donde explico el porque era necesario la creación de algo como nodejs, en resumen nos explica que debido a su frustración en el desarrollo de aplicaciones que hicieran uso de la denominada concurrencia, es decir, la habilidad de hacer múltiples tareas al mismo tiempo, que en la mayoría de los casos era necesario el uso de varios lenguajes y/o sistemas para lograr dicho cometido, siendo muy diferentes entre si, disminuyendo la calidad final del producto en si.
-    
-    Dahl buscaba lograr crear un sistema que hiciera posible que la construcción de productos fuera rápido, sencillo y eficaz. Al mismo tiempo que Ryan Dahl exploraba esto problemas entraban en escena compañías que cambiaron y definieron el desarrollo de software, como: Apple, Google, Facebook, etc... Las cuales invierten grandes cantidades en el desarrollo web, especialmente el gigante de la búsqueda, Google, la cual para garantizar la eficiencia de sus productos estrellas crea el motor V8, interprete detrás de muchos productos relacionados con Javascript, incluyendo a Chrome.
-    
-    El motor V8 esta diseñado para la interpretación y compilación de lenguaje javascript, siendo este altamente eficiente y rápido. Ryan deicidio usar este para la construcción de NodeJS. Resumiendo NodeJS en su núcleo es un entorno de ejecución para javascript del lado del servidor dirigido a eventos haciendo.
+Ryan Dahl el 8 de noviembre del 2009 presenta en el [JSConf.EU NodeJS](https://www.youtube.com/watch?v=ztspvPYybIY) a la comunidad Javascript, donde explico el porque era necesario la creación de algo como nodejs, en resumen nos explica que debido a su frustración en el desarrollo de aplicaciones que hicieran uso de la denominada concurrencia, es decir, la habilidad de hacer múltiples tareas al mismo tiempo, que en la mayoría de los casos era necesario el uso de varios lenguajes y/o sistemas para lograr dicho cometido, siendo muy diferentes entre si, disminuyendo la calidad final del producto en si
+
+ Dahl buscaba lograr crear un sistema que hiciera posible que la construcción de productos fuera rápido, sencillo y eficaz. Al mismo tiempo que Ryan Dahl exploraba esto problemas entraban en escena compañías que cambiaron y definieron el desarrollo de software, como: Apple, Google, Facebook, etc... Las cuales invierten grandes cantidades en el desarrollo web, especialmente el gigante de la búsqueda, Google, la cual para garantizar la eficiencia de sus productos estrellas crea el motor V8, interprete detrás de muchos productos relacionados con Javascript, incluyendo a Chrome.
+
+El motor V8 esta diseñado para la interpretación y compilación de lenguaje javascript, siendo este altamente eficiente y rápido. Ryan deicidio usar este para la construcción de NodeJS. Resumiendo NodeJS en su núcleo es un entorno de ejecución para javascript del lado del servidor dirigido a eventos.
 
 ## 2. Donde Usar NodeJS
 
-    NodeJS es un framework de programación, siendo el único imitador para su uso nuestra imaginación. Podemos crear desde pequeños scripts para la manipulación de sistemas de archivos en cualquier entorno independientemente del sistema operativo, e incluso pòdemos desarrollar completas aplicaciones con complejos procesos de negocio a gran escala, pero como se diseño es especialmente útil para sistemas de alta concurrencia como servidores de mensajería, juegos multijugador o cualquier sistema de ejecucíon en tiempo real.
-    
-    Algunas compañías que ya usan NodeJS son: Uber servicio de taxis, Netflix popular sistemas de striming de video, LinkeIng red social profecional, ect...
+NodeJS es un framework de programación, siendo el único imitador para su uso nuestra imaginación. Podemos crear desde pequeños scripts para la manipulación de sistemas de archivos en cualquier entorno independientemente del sistema operativo, e incluso pòdemos desarrollar completas aplicaciones con complejos procesos de negocio a gran escala, pero como se diseño es especialmente útil para sistemas de alta concurrencia como servidores de mensajería, juegos multijugador o cualquier sistema de ejecucíon en tiempo real.
+
+ Algunas compañías que ya usan NodeJS son: Uber servicio de taxis, Netflix popular sistemas de striming de video, LinkeIng red social profecional, ect...
 
 ##  3. Instalación y uso de nvm
 
-    Las nuevas releases  de Node.js se sacan de la rama master de [GitHub](https://es.wikipedia.org/wiki/GitHub) cada seis meses. Las versiones pares se sacan en abril, y las impares en octubre. Cuando se libera una versión impar, la versión par anterior pasa a soporte a largo plazo (Long Term Support, LTS), que da a la versión un soporte activo de 18 meses desde la fecha de inicio de la LTS. Después de estos 18 meses, la versión recibe otros 12 meses de soporte de mantenimiento. Una versión activa recibirá los cambios compatibles unas pocas semanas después de que aterricen en la versión estable actual. Una versión de mantenimiento recibirá sólo actualizaciones críticas y de documentación.
+ Las nuevas releases  de Node.js se sacan de la rama master de [GitHub](https://es.wikipedia.org/wiki/GitHub) cada seis meses. Las versiones pares se sacan en abril, y las impares en octubre. Cuando se libera una versión impar, la versión par anterior pasa a soporte a largo plazo (Long Term Support, LTS), que da a la versión un soporte activo de 18 meses desde la fecha de inicio de la LTS. Después de estos 18 meses, la versión recibe otros 12 meses de soporte de mantenimiento. Una versión activa recibirá los cambios compatibles unas pocas semanas después de que aterricen en la versión estable actual. Una versión de mantenimiento recibirá sólo actualizaciones críticas y de documentación.
 
 | Release | Nombre  | Fecha release |  Estado LTS   |   Inicio LTS    |                     Inicio mantenimiento                     | Fin mantenimiento |
 | :-----: | :-----: | :-----------: | :-----------: | :-------------: | :----------------------------------------------------------: | :---------------: |
@@ -38,7 +36,7 @@
 |  11.X   |         |  2018-10-23   |    No LTS     |       N/D       |                        Junio de 2019                         |                   |
 |  12.X   |         |  2019-04-23   |   Pendiente   | Octubre de 2019 |                        Abril de 2021                         |   Abril de 2022   |
 
-    En ocasiones cuando desarrollemos con noode puede que atendamos a varios proyectos que usan distintas versiones de este, provocando que saltemos de una instalación a otra. Dándole solución a este problema tenemos una gran herramienta para el desarrollo con este framework, [NVM](https://github.com/nvm-sh/nvm), el cual es un proyecto de código abierto alojado en Github. El cual con unas cuantas líneas de comando podremos tener instalado varias versiones de node en nuestro ordenador.
+En ocasiones cuando desarrollemos con noode puede que atendamos a varios proyectos que usan distintas versiones de este, provocando que saltemos de una instalación a otra. Dándole solución a este problema tenemos una gran herramienta para el desarrollo con este framework, [NVM](https://github.com/nvm-sh/nvm), el cual es un proyecto de código abierto alojado en Github. El cual con unas cuantas líneas de comando podremos tener instalado varias versiones de node en nuestro ordenador.
 
 #### Instalación de NVM en sistemas Windows
 
