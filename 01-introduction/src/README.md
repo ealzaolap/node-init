@@ -49,7 +49,7 @@ volumeOfBox({ width: 2, length: 3, height: 5 }) ➞ 30
 
 ```javascript
 /*
-	Use la misma unidad de medida para cada valor.
+Use la misma unidad de medida para cada valor.
 */
 volumen = largo * ancho * alto
 
