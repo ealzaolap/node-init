@@ -6,21 +6,29 @@
 
    > [Node.js](https://nodejs.org/) es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación [ECMAScript](http://es6-features.org/), asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor [V8 de Google](https://v8.dev/).
 
-Ryan Dahl el 8 de noviembre del 2009 presenta en el [JSConf.EU NodeJS](https://www.youtube.com/watch?v=ztspvPYybIY) a la comunidad Javascript, donde explico el porque era necesario la creación de algo como nodejs, en resumen nos explica que debido a su frustración en el desarrollo de aplicaciones que hicieran uso de la denominada concurrencia, es decir, la habilidad de hacer múltiples tareas al mismo tiempo, que en la mayoría de los casos era necesario el uso de varios lenguajes y/o sistemas para lograr dicho cometido, siendo muy diferentes entre si, disminuyendo la calidad final del producto en si
+Ryan Dahl el 8 de noviembre del 2009 presenta NodeJS en el [JSConf.EU](https://www.youtube.com/watch?v=ztspvPYybIY) a la comunidad de Javascript.  En resumen nos dice que creó este framework debido a su frustración en el desarrollo de aplicaciones que hicieran  múltiples tareas al mismo tiempo, que en la mayoría de los casos era necesario el uso de varios lenguajes y/o sistemas para lograr dicho cometido, siendo muy diferentes entre si y disminuyendo la calidad del producto final. 
 
- Dahl buscaba lograr crear un sistema que hiciera posible que la construcción de productos fuera rápido, sencillo y eficaz. Al mismo tiempo que Ryan Dahl exploraba esto problemas entraban en escena compañías que cambiaron y definieron el desarrollo de software, como: Apple, Google, Facebook, etc... Las cuales invierten grandes cantidades en el desarrollo web, especialmente el gigante de la búsqueda, Google, la cual para garantizar la eficiencia de sus productos estrellas crea el motor V8, interprete detrás de muchos productos relacionados con Javascript, incluyendo a Chrome.
+ Dahl buscaba crear un sistema que hiciera posible que la construcción de productos fuera rápida, sencilla y eficaz. Al mismo tiempo que él exploraba entraban en escena compañías que cambiaron y definieron el desarrollo de software, como: Apple, Google, Facebook, etc... Las cuales invierten grandes cantidades en el desarrollo web, especialmente el gigante de la búsqueda, Google, la cual para garantizar la eficiencia de sus productos estrellas crea el motor V8, intérprete detrás de muchos  sus productos estrella  relacionados con Javascript, incluyendo a Chrome.
 
-El motor V8 esta diseñado para la interpretación y compilación de lenguaje javascript, siendo este altamente eficiente y rápido. Ryan deicidio usar este para la construcción de NodeJS. Resumiendo NodeJS en su núcleo es un entorno de ejecución para javascript del lado del servidor dirigido a eventos.
+El motor V8 está diseñado para la interpretación y compilación de lenguaje javascript, siendo este altamente eficiente y rápido. Ryan decidió usar este para la construcción de NodeJS. Resumiendo NodeJS en su núcleo es un entorno de ejecución para javascript del lado del servidor dirigido a eventos.
 
-## 2. Donde Usar NodeJS
+## 2. Ciclo de eventos y el proceso de node
 
-NodeJS es un framework de programación, siendo el único imitador para su uso nuestra imaginación. Podemos crear desde pequeños scripts para la manipulación de sistemas de archivos en cualquier entorno independientemente del sistema operativo, e incluso pòdemos desarrollar completas aplicaciones con complejos procesos de negocio a gran escala, pero como se diseño es especialmente útil para sistemas de alta concurrencia como servidores de mensajería, juegos multijugador o cualquier sistema de ejecucíon en tiempo real.
+Las instrucciones de un programa se leen secuencialmente, de manera que para que una instrucción sea leída hay que esperar a que la anterior finalice. Cuando las instrucciones que están siendo procesadas son llamadas a funciones hay que esperar a que estas terminen su ejecución para devolverles el control al intérprete, si la función que se llama requiere mucho tiempo en resolverse, ya sea porque se realicen cálculos pesados o se trate de una función I/O, las cuales son bastantes pesadas quedará bloqueado durante todo ese tiempo el hilo de ejecución.
 
- Algunas compañías que ya usan NodeJS son: Uber servicio de taxis, Netflix popular sistemas de striming de video, LinkeIng red social profecional, ect...
+Para dar solución a este inconveniente tradicionalmente se hace uso de múltiples hilos de ejecución, creando asi aplicaciones que llegan a necesitar de muchos recursos para su correcto funcionamiento.
 
-##  3. Instalación y uso de nvm
+Node, en cambio, hace uso de manejadores de eventos y funciones callbacks para no bloquear su  hilo de procesos principal, por ejemplo: Cuando entra una instrución que puede ser bloqueante en el hilo de proceso, esta por lo general cuenta con una función callback  entre sus parámetros haciendo posible que node la ejecute en el momento que termine dicha instrución, dejando su ejecución en un proceso paralelo al hilo principal.
 
- Las nuevas releases  de Node.js se sacan de la rama master de [GitHub](https://es.wikipedia.org/wiki/GitHub) cada seis meses. Las versiones pares se sacan en abril, y las impares en octubre. Cuando se libera una versión impar, la versión par anterior pasa a soporte a largo plazo (Long Term Support, LTS), que da a la versión un soporte activo de 18 meses desde la fecha de inicio de la LTS. Después de estos 18 meses, la versión recibe otros 12 meses de soporte de mantenimiento. Una versión activa recibirá los cambios compatibles unas pocas semanas después de que aterricen en la versión estable actual. Una versión de mantenimiento recibirá sólo actualizaciones críticas y de documentación.
+## 3. Donde Usar NodeJS
+
+NodeJS es un framework de programación, siendo el único limitador para su uso: nuestra imaginación. Podemos crear desde pequeños scripts para la manipulación de sistemas de archivos en cualquier entorno independientemente del sistema operativo, e incluso podemos desarrollar completas aplicaciones con complejos procesos de negocio a gran escala, pero es especialmente útil para sistemas de alta concurrencia como servidores de mensajería, juegos multijugador o cualquier sistema de ejecucíon en tiempo real.
+
+ Algunas compañías que ya usan NodeJS son: Uber (servicio de taxis), el popular sistemas de striming de video Netflix y LinkedIn la red social para profesionales, etc.
+
+##  4. Instalación y uso de nvm
+
+ Las nuevas releases  de Node.js se sacan de la rama master de [GitHub](https://es.wikipedia.org/wiki/GitHub) cada seis meses. Las versiones pares se sacan en abril, y las impares en octubre. Cuando se libera una versión impar, la versión par anterior pasa a soporte de largo plazo (Long Term Support, LTS), que da a la versión un soporte activo de 18 meses desde la fecha de inicio de la LTS. Después de estos 18 meses, la versión recibe otros 12 meses de soporte de mantenimiento. Una versión activa recibirá los cambios compatibles unas pocas semanas después de que aterricen en la versión estable actual. Una versión de mantenimiento recibirá sólo actualizaciones críticas y de documentación.
 
 | Release | Nombre  | Fecha release |  Estado LTS   |   Inicio LTS    |                     Inicio mantenimiento                     | Fin mantenimiento |
 | :-----: | :-----: | :-----------: | :-----------: | :-------------: | :----------------------------------------------------------: | :---------------: |
@@ -36,11 +44,11 @@ NodeJS es un framework de programación, siendo el único imitador para su uso n
 |  11.X   |         |  2018-10-23   |    No LTS     |       N/D       |                        Junio de 2019                         |                   |
 |  12.X   |         |  2019-04-23   |   Pendiente   | Octubre de 2019 |                        Abril de 2021                         |   Abril de 2022   |
 
-En ocasiones cuando desarrollemos con noode puede que atendamos a varios proyectos que usan distintas versiones de este, provocando que saltemos de una instalación a otra. Dándole solución a este problema tenemos una gran herramienta para el desarrollo con este framework, [NVM](https://github.com/nvm-sh/nvm), el cual es un proyecto de código abierto alojado en Github. El cual con unas cuantas líneas de comando podremos tener instalado varias versiones de node en nuestro ordenador.
+En ocasiones cuando desarrollamos con noode puede que atendamos a varios proyectos que usan distintas versiones de este, provocando que saltemos de una instalación a otra. Dándole solución a este problema tenemos una gran herramienta para el desarrollo con este framework, [NVM](https://github.com/nvm-sh/nvm), el cual es un proyecto de código abierto alojado en Github. Que con unas cuantas líneas de comando podremos tener instalado varias versiones de node en nuestro ordenador.
 
 #### Instalación de NVM en sistemas Windows
 
-Instalar NVM en sistemas windows es bastante sencillo, solo tienes que descargar el ejecutables que se encarga de instalar y configuar el proyecto en tu equipo, puedes hacerlo desde [aquí](https://github.com/coreybutler/nvm-windows/releases), para más información visite el proyecto oficial [aqui](https://github.com/coreybutler/nvm-windows).
+Instalar NVM en sistemas windows es bastante sencillo, solo tienes que descargar el ejecutable que se encarga de instalar y configuar el proyecto en tu equipo, puedes hacerlo desde [aquí](https://github.com/coreybutler/nvm-windows/releases), para más información visite el [proyecto oficial](https://github.com/coreybutler/nvm-windows).
 
 #### Instalación de NVM en sistemas Linux y MacOS
 
@@ -49,8 +57,6 @@ Para instalar NVM en sistemas Linux puedes usar los siguientes scripts:
    ```nginx
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
    ```
-
-
 
 O puedes usar Wget:
 
@@ -139,11 +145,11 @@ Note:
   to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
 ```
 
-## 4. Node.js Console - REPL
+## 5. Node.js Console - REPL
 
 Node.js viene con un entorno virtual llamado REPL (también conocido como Node shell). REPL significa Read-Eval-Print-Loop. Es una forma rápida y fácil de probar el código simple Node.js / JavaScript.
 
-Para iniciar REPL (Node shell), abra el símbolo del sistema (en Windows) o terminal (en Mac o UNIX / Linux) y escriba node como se muestra a continuación. Cambiará la solicitud a> en Windows y MAC.
+Para iniciar REPL (Node shell), abra el símbolo del sistema (en Windows) o terminal (en Mac o UNIX / Linux) y escriba node como se muestra a continuación.
 
 ```powershell
 C:\> node
@@ -174,6 +180,7 @@ C:\>node
 ...{
 ...	return x * y
 ...}
+.break
 undefined
 >multiply(50 * 2)
 200
@@ -211,15 +218,15 @@ C:\>
 
 La siguiente tabla enumera los comandos REPL importantes.
 
-| REPL Command     | Descripción                                                  |
-| ---------------- | ------------------------------------------------------------ |
-| .help            | Mostrar ayuda sobre todos los comandos                       |
-| tab Keys         | Mostrar la lista de todos los comandos.                      |
-| Up/Down Keys     | Ver los comandos anteriores aplicados en REPL.               |
-| .save filename   | Guarda la sesión actual de Node REPL en un archivo.          |
-| .load filename   | Cargue el archivo especificado en la sesión actual de Node REPL. |
-| ctrl + c         | Terminar el comando actual.                                  |
-| ctrl + c (twice) | Salir de REPL.                                               |
-| ctrl + d         | Salir de REPL.                                               |
-| .break           | Salir de la expresión multilínea.                            |
-| .clear           | Salir de la expresión multilínea.                            |
+| REPL Command         | Descripción                                                  |
+| -------------------- | ------------------------------------------------------------ |
+| .help                | Mostrar ayuda sobre todos los comandos                       |
+| tab Keys             | Mostrar la lista de todos los comandos.                      |
+| Up/Down Keys         | Ver los comandos anteriores aplicados en REPL.               |
+| .save filename       | Guardar la sesión actual de Node REPL en un archivo.         |
+| .load filename       | Cargar el archivo especificado en la sesión actual de Node REPL. |
+| ctrl + c             | Terminar el comando actual.                                  |
+| ctrl + c (dos veces) | Salir de REPL.                                               |
+| ctrl + d             | Salir de REPL.                                               |
+| .break               | Salir de la expresión multilínea.                            |
+| .clear               | Salir de la expresión multilínea.                            |
