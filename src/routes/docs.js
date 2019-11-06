@@ -9,8 +9,8 @@ docsRouter.get("/", (req, res) => {
 
 /*
 * @Router docs
-* @GET(/:id) -> leer el fichero correspondiente usando el parametro id
-* @utilities -> npm(markdown-it) convierte una expresion markdown a html
+* @GET(/:id) -> leer el fichero correspondiente usando el parámetro id
+* @utilities -> npm(markdown-it) convierte una expresión markdown a html
 * */
 
 
