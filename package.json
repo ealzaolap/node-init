@@ -1,0 +1,40 @@
+{
+  "name": "node-init",
+  "version": "1.0.0",
+  "description": "JavaScript es el único lenguaje de programación que puede ejecutarse en el servidor, en el navegador y en las de bases de datos, con lo cual es el único lenguaje que puede usarse en todas las etapas del desarrollo. Esta serie de clases están pensada para iniciarse en el mundo del desarrollo fullstack con este lenguaje de programación.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ealzaolap/node-init.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ealzaolap/node-init/issues"
+  },
+  "homepage": "https://github.com/ealzaolap/node-init#readme",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-logger": "0.0.2",
+    "gulp-nodemon": "^2.4.2",
+    "gulp-rename": "^1.4.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "markdown-it": "^10.0.0",
+    "morgan": "~1.9.1",
+    "pug": "^2.0.4"
+  }
+}
