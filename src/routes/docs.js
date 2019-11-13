@@ -2,6 +2,7 @@ const Router = require("express").Router;
 const fs = require("fs");
 const path = require("path");
 const docsRouter = new Router();
+const markdown = require("markdown-it");
 
 const DIST_PATH = path.resolve("./dist");
 /*
@@ -9,7 +10,19 @@ const DIST_PATH = path.resolve("./dist");
 * @GET(/:id) -> leer el fichero correspondiente usando el parámetro id
 * @utilities -> npm(markdown-it) convierte una expresión markdown a html
 * */
-
+docsRouter.post("/", (req, res) => {
+    let fileRoute = req.body.path;
+    fs.readFile(fileRoute, ((err, data) => {
+        if (err) {
+            res.status(500);
+            res.send("Bad route");
+        } else {
+            let md = new markdown();
+            let fileParser = md.render(data.toString());
+            res.send(JSON.stringify({file: fileParser}));
+        }
+    }))
+});
 
 /*
 * @Router docs
