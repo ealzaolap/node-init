@@ -36,6 +36,6 @@
     "markdown-it": "^10.0.0",
     "morgan": "~1.9.1",
     "pug": "^2.0.4",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
